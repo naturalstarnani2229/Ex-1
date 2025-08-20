@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple E-Commerce</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>My E-Commerce Store</h1>
+    <button id="cart-btn">🛒 Cart (<span id="cart-count">0</span>)</button>
+  </header>
+
+  <main>
+    <section class="products">
+      <div class="product">
+        <img src= "Z:\DevOps\image 2.jpg" alt="Product 1">
+        <h3>Product 1</h3>
+        <p>$10.00</p>
+        <button onclick="addToCart('Product 1', 10)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="Z:\DevOps\image 5.jpg " alt="Product 2">
+        <h3>Product 2</h3>
+        <p>$15.00</p>
+        <button onclick="addToCart('Product 2', 15)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="Z:\DevOps\image 3.jpg" alt="Product 3">
+        <h3>Product 3</h3>
+        <p>$20.00</p>
+        <button onclick="addToCart('Product 3', 20)">Add to Cart</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="hidden">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="total-price">0</span></p>
+    <button onclick="closeCart()">Close</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
